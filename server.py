@@ -7,10 +7,10 @@ import hashlib
 # Establish connection to MySQL database
 conn = mysql.connector.connect(
     host='localhost',
-    user='root',
-    password='Thienandeptrai123',
+    user='manmeet',
+    password='gocanada',
     port = 3306,
-    database='thienan'
+    database='canada'
 )
 cursor = conn.cursor()
 
