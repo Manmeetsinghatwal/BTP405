@@ -4,7 +4,7 @@ FROM python:3.12-slim
 # Creating the working directory
 WORKDIR /app
 
-# Copy the entire code to the Docker image.
+# Copying the entire code to the Docker image.
 COPY . /app
 
 # Exposing the application port
