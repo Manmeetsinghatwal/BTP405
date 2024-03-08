@@ -6,7 +6,7 @@ import hashlib
 
 # Establish connection to MySQL database
 conn = mysql.connector.connect(
-    host='localhost',
+    host='man',
     user='manmeet',
     password='gocanada',
     port = 3306,
