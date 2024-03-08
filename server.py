@@ -4,7 +4,7 @@ import mysql.connector
 import cgi
 import hashlib
 
-# Establish connection to MySQL database
+# Connecting to MySQL database
 conn = mysql.connector.connect(
     host='man',
     user='manmeet',
@@ -14,7 +14,7 @@ conn = mysql.connector.connect(
 )
 cursor = conn.cursor()
 
-# Create users table if not exists
+# Creating users table 
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS users (
         user_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -23,7 +23,7 @@ cursor.execute("""
     )
 """)
 
-# Create notes table if not exists
+# Creating notes table 
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS notes (
         note_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -115,6 +115,6 @@ if __name__ == '__main__':
     print('Starting server...')
     httpd.serve_forever()
 
-# Close database connection
+# Closing database connection
 cursor.close()
 conn.close()
